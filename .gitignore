@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Node (if later needed)
+node_modules/
+dist/
+
+# Output
+output/
+*.html.bak
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
