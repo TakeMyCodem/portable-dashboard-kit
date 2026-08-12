@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portable Sales Dashboard — Synthetic Demo</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sales Command — Synthetic Demo</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="app">
-    <header class="topbar">
-      <div class="brand">
-        <span class="logo">◈</span>
-        <div>
-          <div class="title">Sales Command</div>
-          <div class="subtitle">Portable · Config-driven · Synthetic data</div>
-        </div>
-      </div>
-      <div class="meta">
-        <span class="pill">YTD 2026</span>
-        <span class="pill muted">Demo</span>
-      </div>
-    </header>
-
-    <nav class="tabs" id="tabs"></nav>
-
-    <main id="content" class="content">
-      <!-- tabs render here -->
-    </main>
-
-    <footer class="footer">
-      <span>Portable Dashboard Kit · synthetic data only · no company data</span>
-      <a href="https://github.com/TakeMyCodem/portable-dashboard-kit" target="_blank">GitHub</a>
-    </footer>
+<header>
+  <div class="header-left">
+    <h1>Sales Command</h1>
+    <div class="meta">v0.2 · synthetic data only · generated 2026-08-12</div>
   </div>
+  <div class="header-right">
+    <span class="pill">YTD 2026</span>
+    <span class="pill muted">Demo · no real company data</span>
+  </div>
+</header>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+<nav class="tabs" id="tab-nav"></nav>
+
+<div id="global-filter-bar" class="filter-bar"></div>
+
+<main id="content"></main>
+
+<footer>
+  <span>Portable Dashboard Kit · per-tab data contracts · synthetic only</span>
+  <a href="https://github.com/TakeMyCodem/portable-dashboard-kit" target="_blank">GitHub</a>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
