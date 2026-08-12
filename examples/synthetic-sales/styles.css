@@ -1,0 +1,259 @@
+:root {
+  --bg: #0f1218;
+  --surface: #171b24;
+  --surface-2: #1e2430;
+  --border: #2a3140;
+  --text: #e8ecf4;
+  --muted: #8b95a8;
+  --accent: #3b82f6;
+  --accent-dim: #2563eb33;
+  --green: #22c55e;
+  --red: #ef4444;
+  --amber: #f59e0b;
+  --radius: 10px;
+  --font: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.45;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 28px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.title {
+  font-weight: 650;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+}
+
+.pill {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--text);
+}
+
+.pill.muted {
+  color: var(--muted);
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.tab {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.tab:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.tab.active {
+  color: var(--text);
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+.content {
+  min-height: 420px;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+
+.card h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.kpi {
+  font-size: 1.55rem;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.kpi-sub {
+  font-size: 0.82rem;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.delta {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.delta.up { color: var(--green); }
+.delta.down { color: var(--red); }
+.delta.flat { color: var(--amber); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+td.num, th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bar-label {
+  width: 110px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--surface-2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.bar-value {
+  width: 70px;
+  text-align: right;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 22px 0 12px;
+}
+
+.footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .bar-label { width: 80px; }
+  .kpi { font-size: 1.3rem; }
+}
