@@ -6,6 +6,19 @@ Config-driven, **portable** HTML/JS dashboard patterns extracted from real produ
 
 This repository contains generalized, anonymized patterns that have proven useful in commercial reporting environments (plan-fact, KPI drill-downs, territory views, etc.). All examples use **synthetic data** only.
 
+## Live demo
+
+**[Open the synthetic sales dashboard →](https://takemycodem.github.io/portable-dashboard-kit/examples/synthetic-sales/)**  
+*(or open `examples/synthetic-sales/index.html` locally)*
+
+What it shows:
+- Overview KPIs (YTD revenue, plan attainment, margin, “ghost money” recovered)
+- Plan vs Fact monthly table + bars
+- Territory performance
+- Top customers
+
+Dark, clean UI. No build step. Works offline once loaded.
+
 ## Core ideas
 
 | Principle | Why it matters |
@@ -16,24 +29,20 @@ This repository contains generalized, anonymized patterns that have proven usefu
 | **Human-in-the-Loop friendly** | Designed so commercial judgment can still override pure numbers where needed. |
 | **Config over hard-coding** | Months, scopes, thresholds, display rules live in config. |
 
-## Planned structure
+## Repo structure
 
 ```
-src/
-  core/           # shared utilities (formatting, calendar, config loading)
-  assembler/      # builds the final portable HTML from tab fragments + data
-  tabs/           # example tabs (overview, plan-fact, drill-down…)
 examples/
-  synthetic-sales/  # full demo with fake but realistic sales data
+  synthetic-sales/     # working demo (open index.html)
+src/                   # (next) extractable core + assembler
 docs/
   architecture.md
-  adr/            # key decisions in ADR style
 ```
 
 ## Status
 
-🚧 Early extraction phase.  
-First concrete module (dashboard shell + one complete tab with synthetic data) is next.
+✅ First working portable demo is live  
+🚧 Next: formal tab contracts + simple assembler script + more tabs
 
 ## Inspiration
 
@@ -41,4 +50,4 @@ These patterns come from multi-year work building and refactoring live sales ana
 
 ---
 
-MIT (planned) · Synthetic data only · No company data
+MIT · Synthetic data only · No company data
